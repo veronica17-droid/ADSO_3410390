@@ -18,6 +18,7 @@ body {
     /*MAIN MENU*/
     &.mainmenu {
         main{
+            border-radius: 20px;
             header{
                 h1{
                     border-bottom: 2px solid #fff9;
@@ -34,10 +35,19 @@ body {
                     object-fit: cover;
                     width: 280px;
                 }
+                img:hover{
+                    transform: translateX(-9px); /* Desplaza ligeramente la tarjeta a la izquierda */
+                    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges"><path fill="black" d="M3 3h2v2H3zM7 2h2v2H7zM11 3h2v2h-2zM4 7h8v2H4zM3 9h10v4H3zM5 13h6v2H5z"/></svg>') 8 8, pointer;
+                    box-shadow: 0 4px 10px rgb(250, 1, 1);
+                }
                 h2{
-                    font-weight: 500;
+                    font-weight: 500rem;
                     text-align: center;
                     text-transform: uppercase;
+                    padding: 2rem;
+
+                    
+
                 }
                 h3{
                     font-weight: 400;
@@ -59,5 +69,35 @@ body {
                 }
             }
         }
+        menu{
+            border-radius: 0px 0px 20px 20px;
+            background-color: rgba(248, 0, 0, 0.493);
+        }
     }
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box; 
+    background-color: rgba(240, 248, 255, 0.39);
+    margin-bottom: 16px; /* Crea el espacio vertical entre cada bloque */
+    width: 100%;
+    border-radius: 15px 0px 0px 15px; 
+    
+    transition: all 0.3s ease;
+}
+a:hover{
+    background-color: rgba(223, 212, 212, 0.829); /* Cambia a un color más opaco/brillante */
+    transform: translateX(-5px); /* Desplaza ligeramente la tarjeta a la izquierda */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.link-two{
+    border-radius: 15px 0px 15px 15px;
 }
