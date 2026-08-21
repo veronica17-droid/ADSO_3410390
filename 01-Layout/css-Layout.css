@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-    background: linear-gradient(45deg, rgb(133, 132, 131), rgb(0, 0, 0));
+    background: linear-gradient(45deg, rgba(131, 0, 0, 0.911), rgb(0, 0, 0));
     color: aliceblue;
     font-family: Poppins, serif;
     display: flex;
@@ -10,20 +10,45 @@ body {
     align-items: center;
     min-height: 100dvh;
 
+    nav.back {
+        align-items: center;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        height: 40px;
+        left: 8px;
+        opacity: .6;
+        padding: 0.4rem;
+        position: fixed;
+        top: 8px;
+        transform: scale(.8);
+        transition: all 0.4s ease-in;
+        width: 40px;
+        &:hover {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+    }
+
+    
+
     main {
-        background: linear-gradient(to bottom, #0009, #0000);
         min-width: 380px;
     }
 
     /*MAIN MENU*/
     &.mainmenu {
         main {
-            border-radius: 15px;
-            background: rgba(18, 18, 22, 0.65);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 15px ;
+            background: linear-gradient(135deg, #2e2929 0%, #0b0d10 50%, #000000 100%);
             header {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    justify-content: center;
+                    padding: 0;
                 h1 {
                     border-bottom: 2px solid #fff9;
                     font-size: 3.2rem;
@@ -38,39 +63,17 @@ body {
                     height: 280px;
                     margin: auto;
                     object-fit: cover;
+                    box-shadow: 0 4px 10px rgb(250, 1, 1);
                     width: 280px;
                 }
-                img:hover{
-                    transform: translateX(-9px); /* Desplaza ligeramente la tarjeta a la izquierda */
-                    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges"><path fill="black" d="M3 3h2v2H3zM7 2h2v2H7zM11 3h2v2h-2zM4 7h8v2H4zM3 9h10v4H3zM5 13h6v2H5z"/></svg>') 8 8, pointer;
-                    box-shadow: 0 4px 10px rgb(250, 1, 1);
-                }
-
-                h2 {
-                    font-weight: 500;
-                    text-align: center;
-                    text-transform: uppercase;
-                }
-
-                h3 {
-                    font-weight: 400;
-                    margin: 0;
-                    text-align: center;
-                }
-
-                h4 {
-                    font-size: 0.8rem;
-                    font-weight: 400;
-                    margin: 0;
-                    text-align: center;
-
-                }
-
                 h5 {
                     font-size: 0.8rem;
                     font-weight: 500;
                     margin: 0;
                     text-align: center;
+                    max-width: 60ch; /* Limita la longitud del texto */
+                    margin-inline: auto; /* Centra el párrafo */
+                    padding-inline: 16px;
                 }
             }
 
@@ -96,6 +99,9 @@ body {
                     &:is(:hover) {
                         background-color: rgb(121, 3, 27);
                         transform: scale(1.04) translateX(18px);
+                        box-shadow: 0 4px 10px rgb(224, 193, 193);
+                        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges"><path fill="black" d="M3 3h2v2H3zM7 2h2v2H7zM11 3h2v2h-2zM4 7h8v2H4zM3 9h10v4H3zM5 13h6v2H5z"/></svg>') 8 8, pointer;
+
                     }
 
                     span {
