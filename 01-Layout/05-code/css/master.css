@@ -1,0 +1,115 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=New+Rocker&display=swap');
+
+/* Variables */
+:root{
+    --color-primary:#3d0000;
+    --color-secudary:#0f0f0f;
+    --color-third:#1c1c07;
+    --white-color:rgb(255, 253, 253);
+    --color-card:#0D0214;
+    scroll-behavior: smooth;
+    --font-headings:"New Rocker", system-ui;;
+    --font-text:"Instrument Serif", serif;;
+}
+
+body{
+    background-color: var(--color-secudary);
+    color: var(--white-color);
+    main{
+        min-height: 100dvh;
+        
+        #header{
+            display: flex;
+            align-items: center;
+            background-color: var(--color-secudary);
+            border-bottom: 1px solid var(--white-color);
+            padding-inline: 1.4rem;
+        }
+        h1{
+            font-family: var(--font-headings);
+            font-weight: 500px;
+            font-size: 3.125rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: block;   
+            margin-left: 16rem;
+           
+        }
+        img.logo{
+            height: 120px;
+            display: block;    
+            margin-left: 30rem; 
+        }
+        header#navbar{
+            background-color: var(--color-primary);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--white-color);
+            height: 80px;
+            justify-content: space-between;
+            padding-inline: 1.4rem;
+            font-family: var(--font-headings43s3                        );            
+            nav.options{
+                position: sticky; 
+                display: flex;
+                justify-content: center; 
+                align-items: center;   
+                text-align: center;
+                gap: 10rem;
+                width: 100%;
+                a:is(:link, :visited){
+                    font-size: 1.6rem;
+                    text-decoration: none;
+                    &:not(.active):hover{
+                        transform: translateY(-6px);
+                    }
+                    &.active{
+                        border-bottom: 2px solid rgb(248, 246, 246) ;
+                        color: aliceblue;
+                    }
+                }
+                
+            }
+        }
+        section#sobre-esto{
+            background: url("../img/bg.png") no-repeat center /cover;
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            height: 600px;
+            border-bottom: 1px solid var(--white-color);
+
+            #texto{
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                h2{
+                    margin: 6rem 0 1.5rem 0;
+                    font-family: var(--font-headings);
+                    font-size: 3rem;
+                    font-weight: 700;
+                    max-width: 500px;
+    
+                }
+                p{
+                    font-family: var(--font-text);
+                    font-size: 1.3rem;
+                    max-width: 600px;
+                }
+            }
+            img.logo-full{
+                margin-top: 3rem;
+                height: 500px;
+            }
+        }
+
+    }
+}
