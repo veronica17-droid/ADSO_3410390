@@ -43,9 +43,60 @@ body {
                 display: block;    
                 margin: auto;
             }
+            button#mburger {    
+                    display: none;         
+                    position: relative;
+                    width: 50px;
+                    height: 44px;
+                    background: none;
+                    border: none;
+                    appearance: none;
+                    transform: scale(.8);
+                    cursor: pointer;
+    
+                    &:focus:not(:focus-visible) {
+                        outline: none;
+                    }
+    
+                     span {
+                        position: absolute;
+                        width: 100%;
+                        height: 3px;
+                        background: #fff;
+                        border-radius: 3px;
+    
+                        &:nth-of-type(1) {
+                            top: 0;
+                            left: 0;
+                            transition: top .3s;
+                        }
+                        &:nth-of-type(2) {
+                            top: 20px;
+                            left: 0;
+                            transition: opacity .3s;
+                        }
+                        &:nth-of-type(3) {
+                            bottom: 0;
+                            left: 0;
+                            transition: bottom .3s;
+                        }
+                    }
+                    &.active span:nth-of-type(1) {
+                        top: 20px;
+                        transform: rotate(-45deg);
+                        transition: top .3s cubic-bezier(.36, -.42, .68, -.56), transform .3s .3s;
+                    }
+                    &.active span:nth-of-type(2) {
+                        opacity: 0;
+                        transition: opacity .05s .3s;
+                    }
+                    &.active span:nth-of-type(3) {
+                        bottom: 20px;
+                        transform: rotate(45deg);
+                        transition: bottom .3s cubic-bezier(.36, -.42, .68, -.56), transform .3s .3s;
+                    }
+                }
         }
-
-
         header#navbar {
             background-color: var(--color-primary);
             position: sticky;
@@ -82,11 +133,12 @@ body {
                         color: aliceblue;
                     }
                 }
+                
             }
+    
         }
-
         section#sobre-esto {
-            background: linear-gradient(rgba(15, 15, 15, 0.8), rgba(15, 15, 15, 0.8)), url("../img/bg.png") no-repeat center / cover;
+            background:  url('../img/fondo.jpg') no-repeat center / cover;
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -269,8 +321,6 @@ body {
             gap: 15px;               
             align-items: flex-start;
         }
-
-
         div#datos-cards img {
         width: 250px;            
         height: auto;
@@ -383,6 +433,75 @@ body {
         
     }
     
+    
 }
+@media (max-width: 768px) {
+    body {
+        main {
+            header#navbar {
+                display: none !important;
+                background-color: #00000099;
+                position: fixed;
+                width: 100vw;
+                height: 100dvh;
+                top: 0;
+                left: -100dvw;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 998;
+                transition: left 0.4s ease;
+
+                nav.options {
+                    background-color: rgba(0, 0, 0, 0.418);
+                    position: absolute;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: start;
+                    flex-direction: column;
+                    padding-top: 100px;
+                    height: 100dvh;
+                    top: 100px;
+                    gap: 2.5rem;
+                }
+
+                &.active {
+                    display: flex !important;
+                    left: 0;
+                }
+            }
+
+            #header {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                flex-wrap: nowrap !important;
+                padding: 0.8rem 1rem !important;
+
+                button#mburger {
+                    display: block !important;
+                    z-index: 999;
+                }
+
+                img.logo {
+                    height: 50px !important; 
+                    margin: 0 !important;
+                }
+
+                h1 {
+                    font-size: 1.5rem !important; 
+                    margin: 0 !important;
+                    width: auto !important;
+                    text-align: center;
+                    flex-grow: 1; 
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+        
+    
 
 
