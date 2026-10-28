@@ -382,77 +382,7 @@ body {
         }
         
     }
+    
 }
 
-/* --- RESPONSIVE DESIGN (Tablets y Celulares) --- */
-@media (max-width: 968px) {
 
-    body main {
-        /* Secciones principales en columna para pantallas medianas y pequeñas */
-        section#sobre-esto {
-            flex-direction: column;
-            text-align: center;
-            justify-content: center;
-
-            #texto {
-                align-items: center;
-                text-align: center;
-            }
-
-            img.logo-full {
-                max-height: 300px;
-            }
-        }
-
-        /* Ficha técnica responsiva */
-        section#ficha-tecnica {
-            h1 {
-                margin-left: 0;
-                text-align: center;
-            }
-        }
-
-        .contenido-ficha {
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            margin: 1rem;
-
-            .texto-principal {
-                width: 100% !important;
-                text-align: center;
-                padding: 0 1rem !important;
-            }
-        }
-
-        div#datos-cards {
-            max-width: 100% !important;
-            width: 90%;
-        }
-
-        /* Muro del caos responsivo */
-        section#muro-del-caos {
-            .publicaciones {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        /* Pie de página responsivo (Footer) */
-        section.pie-de-pagina {
-            flex-direction: column;
-            gap: 30px;
-            padding: 30px 20px 50px 20px;
-            text-align: center;
-        }
-
-        section.pie-de-pagina .logo {
-            margin-bottom: 0;
-        }
-
-        .redes-sociales {
-            flex-direction: column; /* Apila las redes verticalmente en celulares */
-            gap: 25px;
-        }
-    }
-}
