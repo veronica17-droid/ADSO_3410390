@@ -47,44 +47,40 @@
             </div>
             <img class="logo-full" src="img/logo-full.png" alt="Logo">
         </section>
-        <a name="sobre-esto"></a>
         <!-- 03 Peliculas -->
-        <section id="peliculas">
 
+        <section id="peliculas">
             <h1 id="titulo-peliculas">Peliculas</h1>
-            <div class="cards">
-                <button class="btn-carrusel" aria-label="Anterior">
-                    &#10094;
-                </button>
-                <figure class="card">
-                    <h2 id="titulo">Cine de Culto</h2>
-                    <a href="">
-                        <img src="img/cine-de-culto.png" alt="Cine de culto"></a>
-                    <p>Obras extravagantes con un público fiel y obsesivo que desafían el cine convencional.</p>
-                </figure>
-                <figure class="card">
-                    <h2 id="titulo">Clasificación R</h2>
-                    <a href="">
-                        <img src="img/clasificacion-r.png" alt="Clasificación R"></a>
-                    <p>Cine extremo y transgresor con contenido explícito, violencia gráfica, tabúes o erotismo sin
-                        censura.</p>
-                </figure>
-                <figure class="card">
-                    <h2 id="titulo">Cine Basura</h2>
-                    <a href="">
-                        <img src="img/cine-basura.png" alt="Cine Basura"></a>
-                    <p>Películas de bajo presupuesto que celebran lo absurdo, lo cutre y los efectos grotescos...</p>
-                </figure>
-                <figure class="card">
-                    <h2 id="titulo">Archivos Malditos</h2>
-                    <a href="">
-                        <img src="img/archivos-malditos.png" alt="Cine Basura"></a>
-                    <p>Películas difíciles de encontrar, obras olvidadas y rarezas cinematográficas escondidas en los
-                        rincones más oscuros del cine.</p>
-                </figure>
-                <button class="btn-carrusel" aria-label="Siguiente">
-                    &#10095;
-                </button>
+            <div class="carrusel-wrapper">
+                <button class="btn-carrusel prev" aria-label="Anterior">&#10094;</button>
+
+                <div class="cards">
+                    <figure class="card">
+                        <h2 class="titulo-card">Cine de Culto</h2>
+                        <a href=""><img src="img/cine-de-culto.png" alt="Cine de culto"></a>
+                        <p>Obras extravagantes con un público fiel y obsesivo que desafían el cine convencional.</p>
+                    </figure>
+                    <figure class="card">
+                        <h2 class="titulo-card">Clasificación R</h2>
+                        <a href=""><img src="img/clasificacion-r.png" alt="Clasificación R"></a>
+                        <p>Cine extremo y transgresor con contenido explícito, violencia gráfica, tabúes o erotismo sin
+                            censura.</p>
+                    </figure>
+                    <figure class="card">
+                        <h2 class="titulo-card">Cine Basura</h2>
+                        <a href=""><img src="img/cine-basura.png" alt="Cine Basura"></a>
+                        <p>Películas de bajo presupuesto que celebran lo absurdo, lo cutre y los efectos grotescos...
+                        </p>
+                    </figure>
+                    <figure class="card">
+                        <h2 class="titulo-card">Archivos Malditos</h2>
+                        <a href=""><img src="img/archivos-malditos.png" alt="Archivos Malditos"></a>
+                        <p>Películas difíciles de encontrar, obras olvidadas y rarezas cinematográficas escondidas en
+                            los rincones más oscuros del cine.</p>
+                    </figure>
+                </div>
+
+                <button class="btn-carrusel next" aria-label="Siguiente">&#10095;</button>
             </div>
         </section>
 
@@ -92,7 +88,7 @@
             <h1 id="titulo-ficha-tecnica">Ficha técnica bizarra</h1>
 
             <div class="contenido-ficha">
-                <!-- Texto principal a la izquierda -->
+                <!-- Texto introductorio a la izquierda -->
                 <div class="texto-principal">
                     <p>El archivo sin censura con el lado más oscuro, perturbador y absurdo del cine. Aquí no
                         encontrarás los datos aburridos de la producción habitual, sino la letra pequeña que pocos se
@@ -107,87 +103,154 @@
                     </p>
                 </div>
 
-                <!-- Tarjeta a la derecha -->
-                 <button class="btn-carrusel" aria-label="Anterior">
-                    &#10094;
-                </button>
-                <div id="datos-cards">
-                    
-                    <div class="card-top">
-                        <img src="img/logo-datos-card.png" alt="Divine">
-                        <p id="parrafo-derecho">El dato más famoso y perturbador de la película es que Divine comió
-                            excremento real de perro. John Waters esperó pacientemente con la cámara a que el perro de
-                            un vecino hiciera sus necesidades en la acera. Tan pronto como el animal terminó, Divine lo
-                            recogió del suelo y se lo comió frente a la cámara Para demostrar que no había trucos de
-                            edición, la filmaron en una sola toma continua. Divine tuvo que llamarse de inmediato al
-                            hospital para recibir instrucciones de cómo lavarse el estómago. des pués de la grabación,
-                            Divine tuvo que consultar sobre las precauciones sanitarias necesarias tras ingerir el
-                            material. John Waters aprovechó el momento y lo filmó de manera continua, convirtiéndolo en
-                            una secuencia tan impactante como difícil de olvidar.la escena buscaba romper los límites
-                            del cine convencional y desafiar las normas sociales sobre lo que podía mostrarse en
-                            pantalla.</p>
+                <!-- Carrusel de fichas a la derecha -->
+                <div class="carrusel-fichas">
+                    <button class="btn-carrusel prev" aria-label="Anterior">&#10094;</button>
+
+                    <div class="fichas-track">
+                        <!-- Ficha 1 -->
+                        <article class="ficha-card">
+                            <div class="card-top">
+                                <img src="img/logo-datos-card.png" alt="Divine en Pink Flamingos">
+                                <p class="parrafo-derecho">
+                                    El dato más famoso y perturbador de la película es que Divine comió
+                                    excremento real de perro. John Waters esperó pacientemente con la cámara a que el
+                                    perro de
+                                    un vecino hiciera sus necesidades en la acera. Tan pronto como el animal terminó,
+                                    Divine lo
+                                    recogió del suelo y se lo comió frente a la cámara. Para demostrar que no había
+                                    trucos de
+                                    edición, la filmaron en una sola toma continua. Divine tuvo que llamar de inmediato
+                                    al
+                                    hospital para recibir instrucciones de cómo lavarse el estómago. Después de la
+                                    grabación,
+                                    Divine tuvo que consultar sobre las precauciones sanitarias necesarias tras ingerir
+                                    el
+                                    material. John Waters aprovechó el momento y lo filmó de manera continua,
+                                    convirtiéndolo en
+                                    una secuencia tan impactante como difícil de olvidar. La escena buscaba romper los
+                                    límites
+                                    del cine convencional y desafiar las normas sociales sobre lo que podía mostrarse en
+                                    pantalla.
+                                </p>
+                            </div>
+                            <p class="parrafo-abajo">
+                                ¿Sabías que…? John Waters convirtió una escena de apenas unos segundos en uno
+                                de los momentos más famosos del cine de culto, demostrando que, a veces, una sola
+                                secuencia
+                                puede definir la reputación de toda una película.
+                            </p>
+                        </article>
+
+                        <!-- Ficha 2 (ejemplo de segunda ficha) -->
+                        <article class="ficha-card">
+                            <div class="card-top">
+                                <img src="img/exorcista.png" alt="Otra ficha">
+                                <p class="parrafo-derecho">
+                                    El vómito real de "El Exorcista" (1973).
+                                    Para la famosa escena en la que Regan le vomita al Padre Karras, el director William
+                                    Friedkin no quería usar efectos digitales ni trucos baratos. Exigió un líquido
+                                    espeso y repugnante que luciera real en pantalla. La mezcla secreta consistía en
+                                    puré de guisantes (para darle textura), jugo de arándanos (para el color) y avena.
+                                    Sin embargo, el actor Jason Miller tenía que recibir el impacto directo en la cara
+                                    y, para empeorar las cosas, Friedkin lo ató a la cama para que no pudiera
+                                    esquivarlo. La toma se repitió tantas veces que Miller terminó completamente
+                                    empapado y con el olor a guisantes podridos impregnado en la piel durante días. La
+                                    escena es un hito del terror, pero en el set fue una pesadilla higiénica.
+                                </p>
+                            </div>
+                            <p class="parrafo-abajo">
+                                ¿Sabías que…?
+                                La mezcla era tan densa y el olor tan penetrante que Linda Blair (Regan) no podía
+                                contener las náuseas entre tomas, convirtiendo el set en un verdadero caos biológico.
+                            </p>
+                        </article>
+
+                        <!-- Ficha 3 -->
+                        <article class="ficha-card">
+                            <div class="card-top">
+                                <img src="img/holocaustoCanibal.jpg" alt="Otra ficha">
+                                <p class="parrafo-derecho">
+                                    El infierno de rodaje en "Cannibal Holocaust" (1980).
+                                    Pocas películas tienen un legado tan oscuro y maldito. Ruggero Deodato llevó a su
+                                    equipo a la selva amazónica y los sometió a condiciones infrahumanas: raciones de
+                                    comida miserables, picaduras de insectos, infecciones y un calor sofocante. Para
+                                    lograr la máxima crudeza, se sacrificaron animales reales frente a la cámara, algo
+                                    que hoy es totalmente ilegal. La peor parte llegó después: Deodato fue arrestado y
+                                    acusado de asesinato y de hacer un "snuff movie" real. Para probar su inocencia,
+                                    tuvo que obligar a los actores (que habían firmado contratos de confidencialidad
+                                    para desaparecer) a reunirse con los jueces y demostrar que seguían vivos. El rodaje
+                                    fue tan traumático que varios miembros del equipo abandonaron la industria para
+                                    siempre.
+                            </div>
+                            <p class="parrafo-abajo">
+                                ¿Sabías que…? La censura fue tan brutal que la película estuvo prohibida en más de 50 países. En Italia, la corte suprema dictaminó que era una obra de arte y no solo "basura", pero el daño psicológico en el elenco ya estaba hecho.
+                            </p>
+                        </article>
                     </div>
-                    <p id="parrafo-abajo">¿Sabías que…? John Waters convirtió una escena de apenas unos segundos en uno
-                        de los momentos más famosos del cine de culto, demostrando que, a veces, una sola secuencia
-                        puede definir la reputación de toda una película.</p>
+
+                    <button class="btn-carrusel next" aria-label="Siguiente">&#10095;</button>
                 </div>
-                <button class="btn-carrusel" aria-label="Siguiente">
-                    &#10095;
-                </button>
             </div>
         </section>
 
+       
         <!-- 04 Muro del caos -->
         <section id="muro-del-caos">
             <h1 id="titulo">Muro del caos</h1>
-            <div class="publicaciones">
-                <img src="img/publicacion_01.png" alt="">
-                <img src="img/publicacio_02.png" alt="">
-                <img src="img/publicacion_03.png" alt="">
-                <img src="img/publicacion_04.png" alt="">
+
+            <div class="carrusel-wrapper">
+                <button class="btn-carrusel prev" aria-label="Anterior">&#10094;</button>
+
+                <div class="cards-muro">
+                    <img src="img/publicacion_01.png" alt="Publicación 1">
+                    <img src="img/publicacio_02.png" alt="Publicación 2">
+                    <img src="img/publicacion_03.png" alt="Publicación 3">
+                    <img src="img/publicacion_04.png" alt="Publicación 4">
+                </div>
+
+                <button class="btn-carrusel next" aria-label="Siguiente">&#10095;</button>
             </div>
         </section>
+
         <!-- 05 Pie de página -->
-         <section class="pie-de-pagina">
-  <!-- Logo principal a la izquierda -->
-  <img class="logo" src="img/logo.png" alt="Logo Qué carajos vi">
+        <section class="pie-de-pagina">
+            <!-- Logo principal a la izquierda -->
+            <img class="logo" src="img/logo.png" alt="Logo Qué carajos vi">
 
-  <!-- Sección de redes sociales -->
-  <div class="redes-sociales">
-    
-    <!-- Item Instagram -->
-    <a href="#" id="instagram" class="red-item">
-      <span class="titulo-red">Instagram</span>
-      <img src="img/logo-instagram.png" alt="Instagram">
-      <span class="usuario-red">@Quecarajosvi</span>
-    </a>
+            <!-- Sección de redes sociales -->
+            <div class="redes-sociales">
+                <!-- Item Instagram -->
+                <a href="#" id="instagram" class="red-item">
+                    <span class="titulo-red">Instagram</span>
+                    <img src="img/logo-instagram.png" alt="Instagram">
+                    <span class="usuario-red">@Quecarajosvi</span>
+                </a>
 
-    <!-- Item Tiktok -->
-    <a href="#" id="Tiktok" class="red-item">
-      <span class="titulo-red">Tiktok</span>
-      <img src="img/logo-facebook.png" alt="Tiktok"> <!-- Cambia la imagen si corresponde -->
-      <span class="usuario-red">@QCVI?</span>
-    </a>
+                <!-- Item Tiktok -->
+                <a href="#" id="Tiktok" class="red-item">
+                    <span class="titulo-red">Tiktok</span>
+                    <img src="img/logo-facebook.png" alt="Tiktok">
+                    <span class="usuario-red">@QCVI?</span>
+                </a>
 
-    <!-- Item Facebook -->
-    <a href="#" id="Facebook" class="red-item">
-      <span class="titulo-red">Facebook</span>
-      <img src="img/logo-titktok.png" alt="Facebook"> <!-- Cambia la imagen si corresponde -->
-      <span class="usuario-red">@QCVI?</span>
-    </a>
+                <!-- Item Facebook -->
+                <a href="#" id="Facebook" class="red-item">
+                    <span class="titulo-red">Facebook</span>
+                    <img src="img/logo-titktok.png" alt="Facebook">
+                    <span class="usuario-red">@QCVI?</span>
+                </a>
 
-    <!-- Item LetterBox -->
-    <a href="#" id="LetterBox" class="red-item">
-      <span class="titulo-red">LetterBox</span>
-      <img src="img/logo-letterbox.png" alt="Letterboxd">
-      <span class="usuario-red">@QCVI?</span>
-    </a>
+                <!-- Item LetterBox -->
+                <a href="#" id="LetterBox" class="red-item">
+                    <span class="titulo-red">LetterBox</span>
+                    <img src="img/logo-letterbox.png" alt="Letterboxd">
+                    <span class="usuario-red">@QCVI?</span>
+                </a>
+            </div>
 
-  </div>
-
-  
-  <p class="copyright">2026 ¿Qué carajos vi?. All rights reserved</p>
-</section>
+            <p class="copyright">2026 ¿Qué carajos vi?. All rights reserved</p>
+        </section>
 
     </main>
     <script src="js/app.js"></script>
