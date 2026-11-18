@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADSO 3410390</title>
+    <link rel="stylesheet" href="css-Js.css">
+</head>
+
+<body class="mainmenu-javaScript">
+    <nav class="back">
+        <a href="../02-JavaScript/index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    fill="#ffffff" viewBox="0 0 256 256">
+                    <path
+                        d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+                    </path>
+                </svg></a></nav>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>01-Events</h1>
+            <h5>Handle user interactions with event listeners.</h5>
+        </header>
+        <section>
+            <div class="house">
+                <div class="info">
+                    Press arrow keys: <br>
+                    &larr; &uarr; &rarr; &darr;
+                </div>
+                <div class="controls">
+                    <button class="btn-left">&larr;</button>
+                    <button class="btn-up">&uarr;</button>
+                    <button class="btn-right">&rarr;</button>
+                    <button class="btn-down">&darr;</button>
+                </div>
+                <div id="trainer" class="down">
+
+                </div>
+            </div>
+        </section>
+        
+
+    </main>
+    <Script>
+        //Elements
+        const trainer = document.getElementById("trainer");
+        const btnLeft = document.querySelector(".btn-left");
+        const btnUp = document.querySelector(".btn-up");
+        const btnRight = document.querySelector(".btn-right");
+        const btnDown = document.querySelector(".btn-down");
+        
+
+        //Events
+        btnLeft.addEventListener("click", function(){
+            this.style.pointerEvents = "none";
+            this.style.opacity = "0.4";
+            trainer.className = "left";
+        });
+        btnUp.addEventListener("click", function(){
+            this.style.pointerEvents = "none";
+            this.style.opacity = "0.4";
+            trainer.className = "up";
+        });
+        btnRight.addEventListener("click", function(){
+            this.style.pointerEvents = "none";
+            this.style.opacity = "0.4";
+            trainer.className = "right";
+        });
+        btnDown.addEventListener("click", function(){
+            this.style.pointerEvents = "none";
+            this.style.opacity = "0.4";
+            trainer.className = "down";
+        });
+        
+
+        //keyup = levanto el dedo de la tecla
+        // document.addEventListener("keyup", function(event){
+        //     if(event.key == "ArrowLeft"){
+        //         trainer.className = "left";
+        //     }else if(event.key == "ArrowUp"){
+        //         trainer.className = "up";
+        //     }else if(event.key == "ArrowRight"){
+        //         trainer.className = "right";
+        //     }else if(event.key == "ArrowDown"){
+        //         trainer.className = "down"; 
+        //     }
+        // });
+        document.addEventListener("keyup", function(event){
+            // console.log(event.key);
+            // console.log(event-keycode);
+            switch (event.keyCode) {
+                case 37: //left
+                trainer.className = "left";
+                break;
+                case 38: //Up
+                trainer.className = "up";
+                break;
+                case 39: //Right
+                trainer.className = "right";
+                break;
+                case 40: //Down
+                trainer.className = "down";
+                break;
+            }
+        });
+        
+        document.addEventListener("scrollY", function(event){
+            console.log(event.key);
+            console.log(event-keycode);
+            if (event.key == "ScrollY") {
+                alert("hello");
+            }
+        });
+    </Script>
+</body>
+
+</html>
